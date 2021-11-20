@@ -53,6 +53,7 @@ export async function pickOne(): Promise<void> {
 }
 
 export async function showProblem(node?: LeetCodeNode): Promise<void> {
+    console.log(node)
     if (!node) {
         return;
     }
