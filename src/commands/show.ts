@@ -146,9 +146,7 @@ async function showProblemInternal(node: IProblem): Promise<void> {
             return;
         }
 
-        const fileFolder: string = leetCodeConfig
-            .get<string>(`filePath.${language}.folder`, leetCodeConfig.get<string>(`filePath.default.folder`, ""))
-            .trim();
+        const fileFolder: string = leetCodeConfig.defaultLanguage + "-leetcode/" + node.difficulty.toLocaleLowerCase();
         const fileName: string = leetCodeConfig
             .get<string>(
                 `filePath.${language}.filename`,
